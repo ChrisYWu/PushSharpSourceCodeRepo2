@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +52,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Git\PushSharp\PushSharp.Apple\PushSharp.Apple.csproj">
+      <Project>{a9d99f80-feeb-4e74-96c5-66f17103c773}</Project>
+      <Name>PushSharp.Apple</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Git\PushSharp\PushSharp.Core\PushSharp.Core.csproj">
+      <Project>{2b44a8da-60bc-4577-a2d7-d9d53f164b2e}</Project>
+      <Name>PushSharp.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
