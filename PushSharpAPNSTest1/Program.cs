@@ -82,6 +82,7 @@ namespace PushSharpAPNSTest1
             // done with the broker
 
             apnsBroker.Stop();
+
         }
     }
 }
