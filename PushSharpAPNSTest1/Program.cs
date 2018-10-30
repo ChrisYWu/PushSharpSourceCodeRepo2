@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using PushSharp.Apple;
 using PushSharp.Core;
 using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace PushSharpAPNSTest1
 {
@@ -14,10 +15,12 @@ namespace PushSharpAPNSTest1
         static void Main(string[] args)
         {
             // Configuration (NOTE: .pfx can also be used here)
+            var p = Environment.CurrentDirectory;
+            p = Path.Combine(p, "APNSTest2Certificate.p12");
 
             var config = new ApnsConfiguration(
                 ApnsConfiguration.ApnsServerEnvironment.Sandbox,
-                "H:\\APNSCertificates\\APNSTest2Certificate.p12",
+                p,
                 string.Empty);
 
             // Create a new broker
