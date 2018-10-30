@@ -80,6 +80,7 @@ namespace PushSharpAPNSTest1
             // Stop the broker, wait for it to finish   
             // This isn't done after every message, but after you're
             // done with the broker
+
             apnsBroker.Stop();
         }
     }
